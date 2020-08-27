@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7799f98-20bc-4690-bdaf-a7002c920bb8" name="Default Changelist" comment="" />
+    <list default="true" id="c7799f98-20bc-4690-bdaf-a7002c920bb8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +27,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/SequoiaDBFLoader" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MavenImportPreferences">
@@ -53,7 +56,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -142,7 +145,7 @@
       <workItem from="1597997098790" duration="4554000" />
       <workItem from="1598413917255" duration="14263000" />
       <workItem from="1598437272688" duration="629000" />
-      <workItem from="1598494391164" duration="698000" />
+      <workItem from="1598494391164" duration="1339000" />
     </task>
     <servers />
   </component>
@@ -223,11 +226,11 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="299" y="87" key="Maven.ArtifactSearchDialog/0.0.1536.864@0.0.1536.864" timestamp="1597975498869" />
-    <state x="270" y="14" key="SettingsEditor" timestamp="1598001361433">
+    <state x="270" y="14" key="SettingsEditor" timestamp="1598496330339">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="2370" y="23" key="SettingsEditor/0.0.1536.864/1920.0.2560.1440@1920.0.2560.1440" timestamp="1597843415969" />
-    <state x="270" y="14" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1598001361433" />
+    <state x="270" y="14" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1598496330339" />
     <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1598494699407">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
