@@ -26,20 +26,20 @@ public class DbfImporter {
 
     private static LinkedBlockingDeque<List<BSONObject>> bsonListLinkedBlockingDeque = new LinkedBlockingDeque<>(CommonConfig.getConcurrency());
 
-    private static ThreadFactory producerThreadFactory =
-            new ThreadFactoryBuilder()
-                    .setNameFormat("producer-pool-%d")
-                    .build();
-
-    private static ExecutorService producerPoolExecutor =
-            new ThreadPoolExecutor(
-                    CommonConfig.getConcurrency(),
-                    CommonConfig.getConcurrency() + 10,
-                    DatasourceConfig.getKeepAliveTimeout(),
-                    TimeUnit.MILLISECONDS,
-                    new LinkedBlockingQueue<Runnable>(1024),
-                    producerThreadFactory,
-                    new ThreadPoolExecutor.AbortPolicy());
+//    private static ThreadFactory producerThreadFactory =
+//            new ThreadFactoryBuilder()
+//                    .setNameFormat("producer-pool-%d")
+//                    .build();
+//
+//    private static ExecutorService producerPoolExecutor =
+//            new ThreadPoolExecutor(
+//                    CommonConfig.getConcurrency(),
+//                    CommonConfig.getConcurrency() + 10,
+//                    DatasourceConfig.getKeepAliveTimeout(),
+//                    TimeUnit.MILLISECONDS,
+//                    new LinkedBlockingQueue<>(1024),
+//                    producerThreadFactory,
+//                    new ThreadPoolExecutor.AbortPolicy());
 
     private static ThreadFactory consumerThreadFactory =
             new ThreadFactoryBuilder()
@@ -52,11 +52,11 @@ public class DbfImporter {
                     CommonConfig.getConcurrency() + 10,
                     DatasourceConfig.getKeepAliveTimeout(),
                     TimeUnit.MILLISECONDS,
-                    new LinkedBlockingQueue<Runnable>(1024),
+                    new LinkedBlockingQueue<>(1024),
                     consumerThreadFactory,
                     new ThreadPoolExecutor.AbortPolicy());
 
-    public static void importDBF() {
+    public static void importDbf() {
 
         DBFReader dbfReader = null;
 
@@ -71,13 +71,13 @@ public class DbfImporter {
             Object[] rowObjects;
             List<BSONObject> bsonObjectList = new ArrayList<>();
             while ((rowObjects = dbfReader.nextRecord()) != null) {
-                BSONObject rowBSON = new BasicBSONObject();
+                BSONObject rowBson = new BasicBSONObject();
                 for (int j = 0; j < rowObjects.length; j++) {
-                    rowBSON.put(fields[j], rowObjects[j]);
+                    rowBson.put(fields[j], rowObjects[j]);
                 }
                 if (bsonObjectList.size() >= CommonConfig.getBulkSize()) {
-                    List<BSONObject> bulkBSONList = bsonObjectList;
-                    bsonListLinkedBlockingDeque.put(bulkBSONList);
+                    List<BSONObject> bulkBsonList = bsonObjectList;
+                    bsonListLinkedBlockingDeque.put(bulkBsonList);
                     consumerPoolExecutor.execute(
                             () -> {
                                 try {
@@ -87,14 +87,14 @@ public class DbfImporter {
                                 }
                             }
                     );
-                    
+
                     bsonObjectList = new ArrayList<>();
                 }
 
-                bsonObjectList.add(rowBSON);
+                bsonObjectList.add(rowBson);
             }
-            List<BSONObject> remainBSONList = bsonObjectList;
-            bsonListLinkedBlockingDeque.put(remainBSONList);
+            List<BSONObject> remainBsonList = bsonObjectList;
+            bsonListLinkedBlockingDeque.put(remainBsonList);
             consumerPoolExecutor.execute(
                     () -> {
                         try {

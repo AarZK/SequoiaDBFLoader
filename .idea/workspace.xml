@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7799f98-20bc-4690-bdaf-a7002c920bb8" name="Default Changelist" comment="" />
+    <list default="true" id="c7799f98-20bc-4690-bdaf-a7002c920bb8" name="Default Changelist" comment="first commit">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sequoiadb/dbfloader/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sequoiadb/dbfloader/TestMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sequoiadb/dbfloader/core/DbfImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sequoiadb/dbfloader/core/DbfImporter.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,7 +147,7 @@
       <workItem from="1597997098790" duration="4554000" />
       <workItem from="1598413917255" duration="14263000" />
       <workItem from="1598437272688" duration="629000" />
-      <workItem from="1598494391164" duration="2350000" />
+      <workItem from="1598494391164" duration="3426000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1598496361509</created>
@@ -158,7 +163,21 @@
       <option name="project" value="LOCAL" />
       <updated>1598496936101</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="first commit">
+      <created>1598497383057</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598497383057</updated>
+    </task>
+    <task id="LOCAL-00004" summary="first commit">
+      <created>1598497518639</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1598497518639</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,10 +216,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="548" y="291" width="439" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.864@0.0.1536.864" timestamp="1597910479970" />
-    <state x="372" y="7" key="CommitChangelistDialog2" timestamp="1598497381988">
+    <state x="372" y="7" key="CommitChangelistDialog2" timestamp="1598498243362">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="372" y="7" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1598497381988" />
+    <state x="372" y="7" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1598498243362" />
     <state width="1430" height="591" key="DebuggerActiveHint" timestamp="1597915105960">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -255,10 +274,10 @@
     </state>
     <state x="2370" y="23" key="SettingsEditor/0.0.1536.864/1920.0.2560.1440@1920.0.2560.1440" timestamp="1597843415969" />
     <state x="270" y="14" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1598496674695" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1598494699407">
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1598497550184">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1598494699407" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1598497550184" />
     <state x="449" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1598494459842">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

@@ -23,7 +23,7 @@ public class TestMain {
         CommonConfig.setCollection("pokemon");
         SdbManager.initDataSource();
 
-        DbfImporter.importDBF();
+        DbfImporter.importDbf();
         SdbManager.closeDatasource();
 
 
