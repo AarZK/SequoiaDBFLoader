@@ -2,8 +2,8 @@ package com.sequoiadb.dbfloader;
 
 import com.sequoiadb.dbfloader.config.CommonConfig;
 import com.sequoiadb.dbfloader.core.DbfImporter;
-import com.sequoiadb.dbfloader.parser.ConfigParser;
 import com.sequoiadb.dbfloader.db.SdbManager;
+import com.sequoiadb.dbfloader.parser.ConfigParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,9 +23,7 @@ public class TestMain {
         CommonConfig.setCollection("pokemon");
         SdbManager.initDataSource();
 
-        DbfImporter.importDbf();
+        DbfImporter.readDbf("C:\\Users\\14620\\Dropbox\\My PC (DESKTOP-HJS0QCH)\\Desktop\\test.dbf");
         SdbManager.closeDatasource();
-
-
     }
 }

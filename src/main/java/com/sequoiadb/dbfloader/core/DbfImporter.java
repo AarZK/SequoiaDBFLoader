@@ -24,44 +24,45 @@ import java.util.concurrent.*;
  **/
 public class DbfImporter {
 
-    private static LinkedBlockingDeque<List<BSONObject>> bsonListLinkedBlockingDeque = new LinkedBlockingDeque<>(CommonConfig.getConcurrency());
+    public static LinkedBlockingDeque<List<BSONObject>> bsonLists = new LinkedBlockingDeque<>(CommonConfig.getConcurrency() + 10);
 
-//    private static ThreadFactory producerThreadFactory =
-//            new ThreadFactoryBuilder()
-//                    .setNameFormat("producer-pool-%d")
-//                    .build();
-//
-//    private static ExecutorService producerPoolExecutor =
-//            new ThreadPoolExecutor(
-//                    CommonConfig.getConcurrency(),
-//                    CommonConfig.getConcurrency() + 10,
-//                    DatasourceConfig.getKeepAliveTimeout(),
-//                    TimeUnit.MILLISECONDS,
-//                    new LinkedBlockingQueue<>(1024),
-//                    producerThreadFactory,
-//                    new ThreadPoolExecutor.AbortPolicy());
 
-    private static ThreadFactory consumerThreadFactory =
+    private static ThreadFactory producerFactory =
             new ThreadFactoryBuilder()
-                    .setNameFormat("consumer-pool-%d")
+                    .setNameFormat("producer-pool-%d")
                     .build();
 
-    private static ExecutorService consumerPoolExecutor =
+    private static ExecutorService producerExecutor =
             new ThreadPoolExecutor(
                     CommonConfig.getConcurrency(),
                     CommonConfig.getConcurrency() + 10,
                     DatasourceConfig.getKeepAliveTimeout(),
                     TimeUnit.MILLISECONDS,
                     new LinkedBlockingQueue<>(1024),
-                    consumerThreadFactory,
+                    producerFactory,
                     new ThreadPoolExecutor.AbortPolicy());
 
-    public static void importDbf() {
+    private static ThreadFactory consumerFactory =
+            new ThreadFactoryBuilder()
+                    .setNameFormat("consumer-pool-%d")
+                    .build();
+
+    private static ExecutorService consumerExecutor =
+            new ThreadPoolExecutor(
+                    CommonConfig.getConcurrency(),
+                    CommonConfig.getConcurrency() + 10,
+                    DatasourceConfig.getKeepAliveTimeout(),
+                    TimeUnit.MILLISECONDS,
+                    new LinkedBlockingQueue<>(1024),
+                    consumerFactory,
+                    new ThreadPoolExecutor.AbortPolicy());
+
+    public static void readDbf(String dbfPath) {
 
         DBFReader dbfReader = null;
 
         try {
-            dbfReader = new DBFReader(new FileInputStream("C:\\Users\\14620\\Dropbox\\My PC (DESKTOP-HJS0QCH)\\Desktop\\test.dbf"));
+            dbfReader = new DBFReader(new FileInputStream(dbfPath));
             int fieldNum = dbfReader.getFieldCount();
             String[] fields = new String[fieldNum];
             for (int i = 0; i < fieldNum; i++) {
@@ -77,11 +78,11 @@ public class DbfImporter {
                 }
                 if (bsonObjectList.size() >= CommonConfig.getBulkSize()) {
                     List<BSONObject> bulkBsonList = bsonObjectList;
-                    bsonListLinkedBlockingDeque.put(bulkBsonList);
-                    consumerPoolExecutor.execute(
+                    bsonLists.put(bulkBsonList);
+                    consumerExecutor.execute(
                             () -> {
                                 try {
-                                    SdbServer.bulkInsert(bsonListLinkedBlockingDeque.take());
+                                    SdbServer.bulkInsert(bsonLists.take());
                                 } catch (InterruptedException e) {
                                     e.printStackTrace();
                                 }
@@ -94,23 +95,23 @@ public class DbfImporter {
                 bsonObjectList.add(rowBson);
             }
             List<BSONObject> remainBsonList = bsonObjectList;
-            bsonListLinkedBlockingDeque.put(remainBsonList);
-            consumerPoolExecutor.execute(
+            bsonLists.put(remainBsonList);
+            consumerExecutor.execute(
                     () -> {
                         try {
-                            SdbServer.bulkInsert(bsonListLinkedBlockingDeque.take());
+                            SdbServer.bulkInsert(bsonLists.take());
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
                     }
             );
-            consumerPoolExecutor.awaitTermination(60, TimeUnit.SECONDS);
+            consumerExecutor.awaitTermination(60, TimeUnit.SECONDS);
         } catch (FileNotFoundException | InterruptedException e) {
             e.printStackTrace();
         } finally {
             DBFUtils.close(dbfReader);
-            consumerPoolExecutor.shutdown();
-            consumerPoolExecutor.shutdownNow();
+            consumerExecutor.shutdown();
+            consumerExecutor.shutdownNow();
         }
     }
 }

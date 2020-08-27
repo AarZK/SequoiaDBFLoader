@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7799f98-20bc-4690-bdaf-a7002c920bb8" name="Default Changelist" comment="first commit">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="c7799f98-20bc-4690-bdaf-a7002c920bb8" name="Default Changelist" comment="新增 dbf 文件行处理类">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sequoiadb/dbfloader/core/BsonPacker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sequoiadb/dbfloader/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sequoiadb/dbfloader/TestMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sequoiadb/dbfloader/core/DbfConvertor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sequoiadb/dbfloader/core/DbfConvertor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sequoiadb/dbfloader/core/DbfImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sequoiadb/dbfloader/core/DbfImporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sequoiadb/dbfloader/TestMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sequoiadb/dbfloader/TestMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sequoiadb/dbfloader/core/DbfConvertor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sequoiadb/dbfloader/core/DbfConvertor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sequoiadb/dbfloader/core/DbfImporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sequoiadb/dbfloader/core/DbfImporter.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +22,20 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="SequoiaDBFLoader" />
@@ -43,7 +62,9 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1fyiLh51kwFPxeQ60wVwrtLDMrz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -53,7 +74,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Dropbox/My PC (DESKTOP-HJS0QCH)" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -147,7 +168,7 @@
       <workItem from="1597997098790" duration="4554000" />
       <workItem from="1598413917255" duration="14263000" />
       <workItem from="1598437272688" duration="629000" />
-      <workItem from="1598494391164" duration="3426000" />
+      <workItem from="1598494391164" duration="18140000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1598496361509</created>
@@ -177,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598497518639</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="修改部分变量名为小写驼峰格式">
+      <created>1598498552664</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1598498552664</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +213,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="修改部分变量名为小写驼峰格式" />
+    <MESSAGE value="新增 dbf 文件行处理类" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增 dbf 文件行处理类" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="91" key="#Inspections" timestamp="1597394396566">
@@ -208,47 +238,47 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2953" y="522" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864/1920.0.2560.1440@1920.0.2560.1440" timestamp="1597851564721" />
-    <state x="574" y="142" key="#com.intellij.ide.util.MemberChooser" timestamp="1598431354851">
+    <state x="574" y="142" key="#com.intellij.ide.util.MemberChooser" timestamp="1598511794732">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="574" y="142" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1598431354851" />
+    <state x="574" y="142" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1598511794732" />
     <state x="548" y="291" width="439" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1597910479970">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="548" y="291" width="439" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.864@0.0.1536.864" timestamp="1597910479970" />
-    <state x="372" y="7" key="CommitChangelistDialog2" timestamp="1598498243362">
+    <state x="372" y="7" key="CommitChangelistDialog2" timestamp="1598523496235">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="372" y="7" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1598498243362" />
+    <state x="372" y="7" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1598523496235" />
     <state width="1430" height="591" key="DebuggerActiveHint" timestamp="1597915105960">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1430" height="591" key="DebuggerActiveHint/0.0.1536.864@0.0.1536.864" timestamp="1597915105960" />
-    <state x="583" y="187" key="FileChooserDialogImpl" timestamp="1598496802585">
+    <state x="583" y="187" key="FileChooserDialogImpl" timestamp="1598509192748">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="2892" y="312" key="FileChooserDialogImpl/0.0.1536.864/1920.0.2560.1440@1920.0.2560.1440" timestamp="1597843395608" />
-    <state x="583" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1598496802585" />
-    <state width="1493" height="464" key="GridCell.Tab.0.bottom" timestamp="1598436810599">
+    <state x="583" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1598509192748" />
+    <state width="1493" height="464" key="GridCell.Tab.0.bottom" timestamp="1598516541788">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="2517" height="554" key="GridCell.Tab.0.bottom/0.0.1536.864/1920.0.2560.1440@1920.0.2560.1440" timestamp="1597855943649" />
-    <state width="1493" height="464" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1598436810599" />
-    <state width="1493" height="464" key="GridCell.Tab.0.center" timestamp="1598436810598">
+    <state width="1493" height="464" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1598516541788" />
+    <state width="1493" height="464" key="GridCell.Tab.0.center" timestamp="1598516541786">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="2517" height="554" key="GridCell.Tab.0.center/0.0.1536.864/1920.0.2560.1440@1920.0.2560.1440" timestamp="1597855943649" />
-    <state width="1493" height="464" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1598436810598" />
-    <state width="1493" height="464" key="GridCell.Tab.0.left" timestamp="1598436810598">
+    <state width="1493" height="464" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1598516541786" />
+    <state width="1493" height="464" key="GridCell.Tab.0.left" timestamp="1598516541786">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="2517" height="554" key="GridCell.Tab.0.left/0.0.1536.864/1920.0.2560.1440@1920.0.2560.1440" timestamp="1597855943649" />
-    <state width="1493" height="464" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1598436810598" />
-    <state width="1493" height="464" key="GridCell.Tab.0.right" timestamp="1598436810598">
+    <state width="1493" height="464" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1598516541786" />
+    <state width="1493" height="464" key="GridCell.Tab.0.right" timestamp="1598516541787">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="2517" height="554" key="GridCell.Tab.0.right/0.0.1536.864/1920.0.2560.1440@1920.0.2560.1440" timestamp="1597855943649" />
-    <state width="1493" height="464" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1598436810598" />
+    <state width="1493" height="464" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1598516541787" />
     <state width="1493" height="328" key="GridCell.Tab.1.bottom" timestamp="1597983920067">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -265,28 +295,32 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="328" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1597983920067" />
+    <state x="349" y="167" key="IDE.errors.dialog" timestamp="1598508585741">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="349" y="167" key="IDE.errors.dialog/0.0.1536.864@0.0.1536.864" timestamp="1598508585741" />
     <state x="299" y="87" key="Maven.ArtifactSearchDialog" timestamp="1597975498869">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="299" y="87" key="Maven.ArtifactSearchDialog/0.0.1536.864@0.0.1536.864" timestamp="1597975498869" />
-    <state x="270" y="14" key="SettingsEditor" timestamp="1598496674695">
+    <state x="270" y="14" key="SettingsEditor" timestamp="1598509312733">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="2370" y="23" key="SettingsEditor/0.0.1536.864/1920.0.2560.1440@1920.0.2560.1440" timestamp="1597843415969" />
-    <state x="270" y="14" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1598496674695" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1598497550184">
+    <state x="270" y="14" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1598509312733" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1598498635991">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1598497550184" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1598498635991" />
     <state x="449" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1598494459842">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="2668" y="427" key="com.intellij.ide.util.TipDialog/0.0.1536.864/1920.0.2560.1440@1920.0.2560.1440" timestamp="1597840360227" />
     <state x="449" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1598494459842" />
-    <state x="562" y="349" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598497389866">
+    <state x="562" y="349" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598508469306">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="562" y="349" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1598497389866" />
+    <state x="562" y="349" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1598508469306" />
     <state x="321" y="168" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1597915160023">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
