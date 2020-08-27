@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7799f98-20bc-4690-bdaf-a7002c920bb8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="c7799f98-20bc-4690-bdaf-a7002c920bb8" name="Default Changelist" comment="first commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sequoiadb/dbfloader/core/DbfImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sequoiadb/dbfloader/core/DbfImporter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +28,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -51,12 +51,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -145,18 +145,34 @@
       <workItem from="1597997098790" duration="4554000" />
       <workItem from="1598413917255" duration="14263000" />
       <workItem from="1598437272688" duration="629000" />
-      <workItem from="1598494391164" duration="1339000" />
+      <workItem from="1598494391164" duration="1955000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1598496361509</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1598496361509</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="91" key="#Inspections" timestamp="1597394396566">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="361" y="91" key="#Inspections/0.0.1536.864@0.0.1536.864" timestamp="1597394396566" />
+    <state x="361" y="91" key="#Notifications" timestamp="1598496450258">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="361" y="91" key="#Notifications/0.0.1536.864@0.0.1536.864" timestamp="1598496450258" />
     <state x="361" y="91" key="#Project_Structure" timestamp="1597300902215">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -177,15 +193,19 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="548" y="291" width="439" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.864@0.0.1536.864" timestamp="1597910479970" />
+    <state x="372" y="7" key="CommitChangelistDialog2" timestamp="1598496914627">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="372" y="7" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1598496914627" />
     <state width="1430" height="591" key="DebuggerActiveHint" timestamp="1597915105960">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1430" height="591" key="DebuggerActiveHint/0.0.1536.864@0.0.1536.864" timestamp="1597915105960" />
-    <state x="2892" y="312" key="FileChooserDialogImpl" timestamp="1597843395608">
-      <screen x="1920" y="0" width="2560" height="1440" />
+    <state x="583" y="187" key="FileChooserDialogImpl" timestamp="1598496802585">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="2892" y="312" key="FileChooserDialogImpl/0.0.1536.864/1920.0.2560.1440@1920.0.2560.1440" timestamp="1597843395608" />
-    <state x="583" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1597715178766" />
+    <state x="583" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1598496802585" />
     <state width="1493" height="464" key="GridCell.Tab.0.bottom" timestamp="1598436810599">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -226,11 +246,11 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="299" y="87" key="Maven.ArtifactSearchDialog/0.0.1536.864@0.0.1536.864" timestamp="1597975498869" />
-    <state x="270" y="14" key="SettingsEditor" timestamp="1598496330339">
+    <state x="270" y="14" key="SettingsEditor" timestamp="1598496674695">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="2370" y="23" key="SettingsEditor/0.0.1536.864/1920.0.2560.1440@1920.0.2560.1440" timestamp="1597843415969" />
-    <state x="270" y="14" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1598496330339" />
+    <state x="270" y="14" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1598496674695" />
     <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1598494699407">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -240,10 +260,10 @@
     </state>
     <state x="2668" y="427" key="com.intellij.ide.util.TipDialog/0.0.1536.864/1920.0.2560.1440@1920.0.2560.1440" timestamp="1597840360227" />
     <state x="449" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1598494459842" />
-    <state x="562" y="349" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598437376844">
+    <state x="562" y="349" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598496427788">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="562" y="349" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1598437376844" />
+    <state x="562" y="349" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1598496427788" />
     <state x="321" y="168" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1597915160023">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

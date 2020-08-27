@@ -89,6 +89,7 @@ public class DbfImporter {
                     );
                     bsonObjectList = new ArrayList<>();
                 }
+
                 bsonObjectList.add(rowBSON);
             }
             List<BSONObject> remainBSONList = bsonObjectList;
